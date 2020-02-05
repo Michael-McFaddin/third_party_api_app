@@ -1,0 +1,12 @@
+# @weather
+
+@weather.map do |body|
+  {
+    city: body["city_name"],
+    state: body["state_code"],
+    current_weather: body["weather"]["description"],
+    wind_dir: body["wind_dir"],
+    sunrise: body["sunrise"],
+    sunset: body["sunset"]
+  }
+end
